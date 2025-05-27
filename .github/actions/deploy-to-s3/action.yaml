@@ -1,0 +1,5 @@
+name: 'deploy to s3'
+description: 'deploy html to s3 bucket'
+runs:
+  using: 'node20'
+  main: 'main.js'
