@@ -12,7 +12,7 @@ function run() {
 
   core.notice('custom javascript action');
 
-  const website = `https://${bucket}.s3.${region}.amazonaws.com`;
+  const website = `https://${bucket}.s3.${region}.amazonaws.com/index.html`;
   core.setOutput('website', website);
 }
 
