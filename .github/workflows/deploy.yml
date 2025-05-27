@@ -75,8 +75,8 @@ jobs:
           region: us-west-2
           dist-folder: ./dist
       - name: url
-        run: echo "Live URL: ${{ steps.website.outputs.website}}"
-
+        run: |
+          echo "Live URL: ${{steps.website.outputs.website}}"
   # information:
   #   runs-on: ubuntu-latest
   #   steps:
