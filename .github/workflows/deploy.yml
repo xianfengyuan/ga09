@@ -66,6 +66,7 @@ jobs:
         run: echo "Deploying..."
       - name: deploy
         uses: ./.github/actions/deploy-to-s3
+        id: website
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
@@ -73,6 +74,9 @@ jobs:
           bucket: sheermountwebhost
           region: us-west-2
           dist-folder: ./dist
+      - name: url
+        run: echo "Live URL: ${{ steps.website.outputs.website}}"
+
   # information:
   #   runs-on: ubuntu-latest
   #   steps:

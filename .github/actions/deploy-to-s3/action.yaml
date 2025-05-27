@@ -11,6 +11,9 @@ inputs:
   dist-folder:
     description: 'folder'
     required: true
+outputs:
+  website:
+    description: 'the URL link'
 runs:
   using: 'node20'
   main: 'main.js'
