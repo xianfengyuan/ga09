@@ -65,7 +65,7 @@ jobs:
       - name: Deploy site
         run: echo "Deploying..."
       - name: deploy
-        uses: ./.github/actions/deploy-to-s3
+        uses: ./.github/actions/deploy-s3-docker
         id: website
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}

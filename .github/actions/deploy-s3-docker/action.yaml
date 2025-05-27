@@ -1,0 +1,19 @@
+name: 'deploy to s3'
+description: 'deploy html to s3 bucket'
+inputs:
+  bucket:
+    description: 'bucket name'
+    required: true
+  region:
+    description: 'bucket region'
+    required: false
+    default: 'us-east-1'
+  dist-folder:
+    description: 'folder'
+    required: true
+outputs:
+  website:
+    description: 'the URL link'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
